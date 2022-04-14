@@ -5,7 +5,7 @@ import Workbook from '../../src/index';
 const data1 = [
   {
     foo: '***',
-    bar: '456',
+    bar: '2020-02-02',
     baz: '789'
   },
   {

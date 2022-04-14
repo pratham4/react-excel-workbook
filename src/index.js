@@ -30,7 +30,7 @@ function sheet_from_array_of_arrays(data) {
       var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
 
       var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
-      if (typeof cell.v === 'string' && cell.v.indexOf('***')) {
+      if (typeof cell.v === 'string' && cell.v.indexOf('***') > -1) {
         cell.t = 's';
       } else if (isNaN(cell.v) === false) cell.t = 'n';
       else if (typeof cell.v === 'boolean') cell.t = 'b';
