@@ -29,7 +29,9 @@ function sheet_from_array_of_arrays(data) {
       if (cell.v == null) continue;
       var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
 
-      if (isNaN(cell.v) === false) cell.t = 'n';
+      if (cell.v.contains('***')) {
+        cell.t = 's';
+      } else if (isNaN(cell.v) === false) cell.t = 'n';
       else if (typeof cell.v === 'boolean') cell.t = 'b';
       else if (isNaN(Date.parse(cell.v)) === false) {
         cell.t = 'd';

@@ -1,6 +1,6 @@
 {
   "name": "react-excel-workbook-pb",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "An downloadable excel workbook react component",
   "main": "lib/index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ClearC2/react-excel-workbook.git"
+    "url": "git+https://github.com/pratham4/react-excel-workbook.git"
   },
   "keywords": [
     "react-component",
@@ -45,9 +45,9 @@
     "react-dom": "^15.0.0",
     "prop-types": "^15.0.0"
   },
-  "homepage": "https://github.com/ClearC2/react-excel-workbook",
+  "homepage": "https://github.com/pratham4/react-excel-workbook",
   "bugs": {
-    "url": "https://github.com/ClearC2/react-excel-workbook/issues"
+    "url": "https://github.com/pratham4/react-excel-workbook/issues"
   },
   "directories": {
     "example": "example",
