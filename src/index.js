@@ -29,7 +29,8 @@ function sheet_from_array_of_arrays(data) {
       if (cell.v == null) continue;
       var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
 
-      if (cell.v.contains('***')) {
+      var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
+      if (typeof cell.v === 'string' && cell.v.indexOf('***')) {
         cell.t = 's';
       } else if (isNaN(cell.v) === false) cell.t = 'n';
       else if (typeof cell.v === 'boolean') cell.t = 'b';
