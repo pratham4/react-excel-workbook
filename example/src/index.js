@@ -4,18 +4,18 @@ import Workbook from '../../src/index';
 
 const data1 = [
   {
-    foo: '***',
-    bar: '2020-02-02',
-    baz: '789'
+    foo: '***-**-1749',
+    bar: 55,
+    baz: 'asdf'
   },
   {
-    foo: 'abc',
-    bar: 'dfg',
+    foo: '***-**-1749',
+    bar: 555,
     baz: 'hij'
   },
   {
-    foo: 'aaa',
-    bar: 'bbb',
+    foo: '***-**-1749',
+    bar: 9,
     baz: 'ccc'
   }
 ];
@@ -40,6 +40,7 @@ const example = (
         <Workbook.Sheet data={() => data1} name="Sheet A">
           <Workbook.Column label="Foo" value="foo" />
           <Workbook.Column label="Bar" value="bar" />
+          <Workbook.Column label="Baz" value="baz" />
         </Workbook.Sheet>
         <Workbook.Sheet data={data2} name="Another sheet">
           <Workbook.Column label="Double aaa" value={row => row.aaa * 2} />
