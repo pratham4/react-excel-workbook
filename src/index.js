@@ -28,8 +28,7 @@ function sheet_from_array_of_arrays(data) {
       var cell = { v: data[R][C] };
       if (cell.v == null) continue;
       var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
-
-      var cell_ref = XLSX.utils.encode_cell({ c: C, r: R });
+      console.log("Column " + C + " value -> " + cell.v + " *** condition vaule (typeof cell.v === 'string' && cell.v.indexOf('***') > -1) " + (typeof cell.v === 'string' && cell.v.indexOf('***') > -1));
       if (typeof cell.v === 'string' && cell.v.indexOf('***') > -1) {
         cell.t = 's';
       } else if (isNaN(cell.v) === false) cell.t = 'n';
