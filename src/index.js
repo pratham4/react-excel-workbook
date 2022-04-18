@@ -31,7 +31,10 @@ function sheet_from_array_of_arrays(data) {
       console.log("Column " + C + " value -> " + cell.v + " *** condition vaule (typeof cell.v === 'string' && cell.v.indexOf('***') > -1) " + (typeof cell.v === 'string' && cell.v.indexOf('***') > -1));
       if (typeof cell.v === 'string' && cell.v.indexOf('***') > -1) {
         cell.t = 's';
-      } else if (isNaN(cell.v) === false) cell.t = 'n';
+        ws[cell_ref] = cell;
+        continue;
+      }
+      if (isNaN(cell.v) === false) cell.t = 'n';
       else if (typeof cell.v === 'boolean') cell.t = 'b';
       else if (isNaN(Date.parse(cell.v)) === false) {
         cell.t = 'd';
