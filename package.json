@@ -1,6 +1,6 @@
 {
   "name": "react-excel-workbook-pb",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "An downloadable excel workbook react component",
   "main": "lib/index.js",
   "scripts": {

@@ -36,7 +36,7 @@ function sheet_from_array_of_arrays(data) {
 
       if (isNaN(cell.v) === false) {
         cell.t = 'n';
-        cell.z = "\"T\"\ #0.00";
+        cell.z = '#0.00';
       }
       else if (typeof cell.v === 'boolean') cell.t = 'b';
       else if (isNaN(Date.parse(cell.v)) === false && cell.v.indexOf('***') === -1) {
