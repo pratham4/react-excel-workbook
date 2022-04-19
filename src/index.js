@@ -36,12 +36,11 @@ function sheet_from_array_of_arrays(data) {
 
       if (isNaN(cell.v) === false) {
         cell.t = 'n';
-        cell.z = '#0.00';
+        cell.z = '0%';
       }
       else if (typeof cell.v === 'boolean') cell.t = 'b';
       else if (isNaN(Date.parse(cell.v)) === false && cell.v.indexOf('***') === -1) {
         cell.t = 'd';
-        cell.z = 'yyyy-MM-dd';
       } else cell.t = 's';
 
       ws[cell_ref] = cell;
